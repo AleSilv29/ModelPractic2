@@ -51,18 +51,18 @@ public class Main {
         }
         fileWriter.close();
 
-        Temperature temperature1=new Temperature(5, 200, 1);
-        Temperature temperature2=new Temperature(2, 260, 2);
-        Temperature temperature3=new Temperature(8, 200, 3);
-        Temperature temperature4=new Temperature(10, 200, 4);
-        Temperature temperature5=new Temperature(15, 100, 5);
-        Temperature temperature6=new Temperature(20, 100, 6);
-        Temperature temperature7=new Temperature(28, 100, 7);
-        Temperature temperature8=new Temperature(30, 100, 8);
-        Temperature temperature9=new Temperature(25, 100, 9);
-        Temperature temperature10=new Temperature(15, 100, 10);
-        Temperature temperature11=new Temperature(8, 100, 11);
-        Temperature temperature12=new Temperature(2, 100, 12);
+        Temperature temperature1=new Temperature(5, "Celsius", 1);
+        Temperature temperature2=new Temperature(2, "Celsius", 2);
+        Temperature temperature3=new Temperature(8, "Celsius", 3);
+        Temperature temperature4=new Temperature(10, "Celsius", 4);
+        Temperature temperature5=new Temperature(15, "Celsius", 5);
+        Temperature temperature6=new Temperature(20, "Celsius", 6);
+        Temperature temperature7=new Temperature(28, "Celsius", 7);
+        Temperature temperature8=new Temperature(30, "Celsius", 8);
+        Temperature temperature9=new Temperature(25, "Celsius", 9);
+        Temperature temperature10=new Temperature(15, "Celsius", 10);
+        Temperature temperature11=new Temperature(8, "Celsius", 11);
+        Temperature temperature12=new Temperature(2, "Celsius", 12);
         List<Temperature> temperatureList=new ArrayList<>();
         temperatureList.add(temperature1);
         temperatureList.add(temperature2);

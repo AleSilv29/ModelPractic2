@@ -27,9 +27,12 @@ public class View {
             if (option == 1) {
                 Scanner myObj = new Scanner(System.in);  // Create a Scanner object
                 double scanTemp;
-                int scanMass, scanMonth;
+                int scanMonth;
+                String scanMass;
                 System.out.println("City: ");
                 String scanCity = myObj.nextLine();  // Read user input
+                System.out.print("Unit (Celsius/Fahrenheit): ");
+                scanMass = myObj.nextLine();
                 boolean cityExists=false;
                 for (City c: controller.cities){
                     if (Objects.equals(c.getName(), scanCity))
@@ -47,9 +50,6 @@ public class View {
 
                 System.out.print("Temperature: ");
                 scanTemp = myObj.nextDouble();
-
-                System.out.print("Mass: ");
-                scanMass = myObj.nextInt();
 
                 System.out.print("Month: ");
                 scanMonth = myObj.nextInt();
@@ -76,7 +76,7 @@ public class View {
                 for (City c : controller.cities) {
                     if (c.getName().equals(scanCity)) {
                         for (Temperature t : c.getTemperatures()) {
-                            System.out.println("Month: "+t.getMonth() + " with Temperature " + t.getTemp());
+                            System.out.println("Month: "+t.getMonth() + " with Temperature " + t.getTemp() + " "+ t.getUnit());
                         }
                     }
                 }
@@ -90,7 +90,7 @@ public class View {
                     if (c.getName().equals(scanCity)) {
                         for (Temperature t : c.getTemperatures()) {
                             double FahrTemp=controller.FahrenheitTemp(t);
-                            System.out.println("Month: "+t.getMonth() + " with Temperature "+FahrTemp);
+                            System.out.println("Month: "+t.getMonth() + " with Temperature "+FahrTemp+" Fahrenheit");
                         }
                     }
                 }

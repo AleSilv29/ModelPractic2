@@ -1,10 +1,8 @@
 package Model;
 
-import java.util.Scanner;
-
 public class Temperature {
     double temp;
-    int mass;
+    String unit;
     int month;
 
     public double getTemp() {
@@ -15,12 +13,12 @@ public class Temperature {
         this.temp = temp;
     }
 
-    public int getMass() {
-        return mass;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setMass(int mass) {
-        this.mass = mass;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public int getMonth() {
@@ -31,9 +29,9 @@ public class Temperature {
         this.month = month;
     }
 
-    public Temperature(double temp, int mass, int month) {
+    public Temperature(double temp, String unit, int month) {
         this.temp = temp;
-        this.mass = mass;
+        this.unit = unit;
         this.month = month;
     }
 }

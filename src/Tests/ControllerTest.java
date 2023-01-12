@@ -14,7 +14,7 @@ class ControllerTest {
 
     @org.junit.jupiter.api.Test
     void addTemperature() {
-        Temperature temperature1=new Temperature(5, 200, 2);
+        Temperature temperature1=new Temperature(5, "Celsius", 2);
         List<Temperature> temperatureList=new ArrayList<Temperature>();
         temperatureList.add(temperature1);
         City city1=new City("Cluj", "Romania",temperatureList);
@@ -22,8 +22,8 @@ class ControllerTest {
         cityList.add(city1);
         Controller controller = new Controller(cityList);
 
-        Temperature temperature2=new Temperature(10, 200, 2);
-        Temperature temperature3=new Temperature(20, 200, 6);
+        Temperature temperature2=new Temperature(10, "Celsius", 2);
+        Temperature temperature3=new Temperature(20, "Celsius", 6);
         controller.addTemperature(city1,temperature1);
         controller.addTemperature(city1,temperature2);
         controller.addTemperature(city1,temperature3);
@@ -42,7 +42,7 @@ class ControllerTest {
 
     @org.junit.jupiter.api.Test
     void fahrenheitTemp() {
-        Temperature temperature1=new Temperature(5, 200, 2);
+        Temperature temperature1=new Temperature(5, "Celsius", 2);
         List<Temperature> temperatureList=new ArrayList<Temperature>();
         temperatureList.add(temperature1);
         City city1=new City("Cluj", "Romania",temperatureList);
