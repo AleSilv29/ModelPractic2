@@ -1,0 +1,4 @@
+Afghanistan Asien 652230 25500100 Kabul
+Albanien  Europa 28748 2821977 Tirana
+Moldova Europa 38000 150000 Chisinau
+Mali Africa 1240000 3000000 Bamako
