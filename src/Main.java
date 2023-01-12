@@ -1,3 +1,8 @@
+import Controller.Controller;
+import Model.City;
+import Model.Temperature;
+import View.View;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.*;
@@ -46,5 +51,39 @@ public class Main {
         }
         fileWriter.close();
 
+        Temperature temperature1=new Temperature(5, 200, 1);
+        Temperature temperature2=new Temperature(2, 260, 2);
+        Temperature temperature3=new Temperature(8, 200, 3);
+        Temperature temperature4=new Temperature(10, 200, 4);
+        Temperature temperature5=new Temperature(15, 100, 5);
+        Temperature temperature6=new Temperature(20, 100, 6);
+        Temperature temperature7=new Temperature(28, 100, 7);
+        Temperature temperature8=new Temperature(30, 100, 8);
+        Temperature temperature9=new Temperature(25, 100, 9);
+        Temperature temperature10=new Temperature(15, 100, 10);
+        Temperature temperature11=new Temperature(8, 100, 11);
+        Temperature temperature12=new Temperature(2, 100, 12);
+        List<Temperature> temperatureList=new ArrayList<>();
+        temperatureList.add(temperature1);
+        temperatureList.add(temperature2);
+        temperatureList.add(temperature3);
+        temperatureList.add(temperature4);
+        temperatureList.add(temperature5);
+
+        List<Temperature> temperatureList2=new ArrayList<>();
+        temperatureList2.add(temperature6);
+        temperatureList2.add(temperature7);
+        temperatureList2.add(temperature8);
+        temperatureList2.add(temperature9);
+        temperatureList2.add(temperature10);
+
+        City city1=new City("Cluj", "Romania", temperatureList);
+        City city2=new City("Satu Mare", "Romania", temperatureList2);
+        List<City> cityList=new ArrayList<>();
+        cityList.add(city1);
+        cityList.add(city2);
+        Controller c=new Controller(cityList);
+        View v=new View(c);
+        v.menu();
     }
 }
